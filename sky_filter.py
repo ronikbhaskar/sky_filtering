@@ -112,7 +112,7 @@ def filter_path(path):
         files.append(path)
     else:
         for f in os.listdir(path):
-            files.append(f)
+            files.append(os.path.join(path, f))
 
     out_dir = os.path.join(os.getcwd(), OUT_DIR)
 
